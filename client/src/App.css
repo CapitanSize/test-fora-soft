@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper h2{
+  margin-top: 20vh;
+}
+
+.chat{
+  margin-top: 10px;
+  width: 50vw;
+  height: 80vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.messages{
+  height: 80vh;
+  background-color: lightblue;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.message{
+  background-color: #fff;
+  border: 1px solid #e5e5ea;
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  font-family: "SanFrancisco", serif;
+  font-size: 1.25rem;
+  margin: 0 auto 1rem;
+  width: 50vw;
+  height: 80vh;
+  padding: 0.5rem 1.5rem;
+  overflow: auto;
+}
+
+.message p{
+  border-radius: 1.15rem;
+  line-height: 1.25;
+  padding: 0.5rem .875rem;
+  position: relative;
+  word-wrap: break-word;
+  max-width: 70%;
+}
+
+.message p::before,
+.message p::after{
+  bottom: -0.1rem;
+  content: "";
+  height: 1rem;
+  position: absolute;
+}
+
+p.currentUserMessage{
+  align-self: flex-end;
+  background-color: #248bf5;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+p.currentUsername{
+  align-self: flex-end;
+  background-color: #248bf5;
+  color: #fff;
+}
+
+p.currentUserMessage::before{
+  border-bottom-left-radius: 0.8rem 0.7rem;
+  border-right: 1rem solid #248bf5;
+  right: -0.35rem;
+  transform: translate(0, -0.1rem);
+}
+
+p.currentUserMessage::after{
+  background-color: #fff;
+  border-bottom-left-radius: 0.5rem;
+  right: -40px;
+  transform:translate(-30px, -2px);
+  width: 10px;
+}
+
+p.otherUserMessage{
+  align-items: flex-start;
+  background-color: #e5e5ea;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+p.otherUserMessage::before{
+  border-bottom-right-radius: 0.8rem 0.7rem;
+  border-left: 1rem solid #e5e5ea;
+  left: -0.35rem;
+  transform: translate(0, -0.1rem);
+}
+
+p.otherUserMessage::after{
+  background-color: #fff;
+  border-bottom-right-radius: 0.5rem;
+  left: 20px;
+  transform: translate(-30px, -2px);
+  width: 10px;
+}
+
+.form{
+  width: 30vw;
+  min-width: 300px;
+  height: 25vh;
+  min-height: 200px;
+  border: 2px solid #248bf5;
+  border-radius: 10px;
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  margin-top: 5vh;
+}
+.form-wrapper{
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.joinRoom{
+  position: absolute;
+  flex-direction: column;
+  display: flex;
+  align-items: flex-end;
+  width: 250px;
+  z-index: 10;
+  top: 80%;
+  left: 80%;
+}
+.roomUsersList{
+  position: absolute;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  width: 250px;
+  height: 300px;
+  z-index: 9;
+  top: 20%;
+  left: 80%;
+}
